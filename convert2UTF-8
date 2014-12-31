@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ "$1" != "" ]
+then
+	cd $1
+fi
+
+for i in `ls *.java`
+do
+	echo "Converting $i ..."
+	iconv -f CP1252 -t UTF-8 $i > $i.tmp
+	mv $i.tmp $i
+done
