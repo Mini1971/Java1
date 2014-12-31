@@ -1,6 +1,8 @@
 
 public class Div {
 	public static void main(String[] args) {
+		System.out.println("Division mit beliebiger Genauigkeit");
+		
 		int z1 = 10;
 		int z2 = 897;
 		
