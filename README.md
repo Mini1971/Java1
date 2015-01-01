@@ -1,5 +1,6 @@
 Java1
 =====
 
-Java Übungsblätter mit Lösungen für Anfänger
-Oh ist das schwer.
+Java Übungsblätter mit Lösungen
+für Anfänger und Fortgeschrittene
+
