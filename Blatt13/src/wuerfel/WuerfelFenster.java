@@ -43,9 +43,6 @@ public class WuerfelFenster extends JFrame implements ActionListener {
 
 		doWuerfeln();
 
-		for (int i = 0; i < colHead.length; i++) {
-			String col = table.getColumnName(i);
-		}
 		table.setShowGrid(true);
 	}
 
@@ -102,8 +99,6 @@ public class WuerfelFenster extends JFrame implements ActionListener {
 	public static void main(String[] args) throws ClassNotFoundException,
 			InstantiationException, IllegalAccessException,
 			UnsupportedLookAndFeelException {
-		UIManager
-				.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
 		WuerfelFenster win = new WuerfelFenster("Computer-Würfel");
 
 		win.setBounds(0, 0, 500, 400);
