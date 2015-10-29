@@ -1,8 +1,8 @@
 
 public class BrailleTest {
 
-	private static final char DOT = '•';// '\u25CF';
-	private static final char EMPTY = '·'; // '\u25cb';
+	private static final char DOT = '•';// '\u2022' '\u25CF';
+	private static final char EMPTY = '·'; // '\u00b7' '\u25cb';
 
 	public static void main(String[] args) {
 		String txt = "abcdefg";

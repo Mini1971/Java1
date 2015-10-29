@@ -10,6 +10,11 @@ public class Matrix5x7Test {
 		txt = "ABCDEFGHIJKLMNO";
 		println(txt);
 
+		txt = "ABCDEFGHIJKLMNO";
+		println(txt, true, true);
+		txt = new StringBuffer("ABCDEFGHIJKLMNO").reverse().toString();
+		println(txt, false, false);
+		
 		txt = "PQRSTUVWXYZ[¥]^_";
 		println(txt);
 
@@ -26,20 +31,26 @@ public class Matrix5x7Test {
 		println(txt);
 
 		txt = new StringBuffer("Joachim Heitel").reverse().toString();
-		println(txt, false);
+		println(txt, false, false);
 
 	}
 
 	private static void println(String txt) {
-		println(txt, true);
+		println(txt, false, true);
 	}
 	
-	private static void println(String txt, boolean normal) {
+	private static void println(String txt, boolean buchstabe, boolean normal) {
 		byte[][] m = Matrix5x7ROM.M5x7;
 		int len = m[0].length;
+		
 		for (int j = 0; j < len; j++) {
 			for (int i = 0; i < txt.length(); i++) {
 				char c1 = txt.charAt(i);
+				char output = '*';
+				if (buchstabe) {
+					output = c1;
+				}
+				
 				if (c1 == '¥') { // Sonderbehandlung
 					c1 = 60 + ' ';
 				}
@@ -55,7 +66,7 @@ public class Matrix5x7Test {
 					
 					for (int k = 0; k < 5; k++) {
 						if (b % 2 == 1) {
-							System.out.print('*');
+							System.out.print(output);
 						} else {
 							System.out.print(' ');
 						}
