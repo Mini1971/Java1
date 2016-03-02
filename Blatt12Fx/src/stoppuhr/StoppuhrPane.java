@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.util.Duration;
 
 
 public class StoppuhrPane extends BorderPane {
@@ -18,7 +19,7 @@ public class StoppuhrPane extends BorderPane {
 	private Button start = new Button("Start");
 	private Button stop = new Button("Stopp");
 	private Button reset = new Button("Reset");
-	private Timeline timer = new Timeline(new KeyFrame(javafx.util.Duration.millis(10), e -> timer(e)));
+	private Timeline timer = new Timeline(new KeyFrame(Duration.millis(10), e -> timer(e)));
 	private long startTime;
 	
 	public StoppuhrPane() {
