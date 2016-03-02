@@ -17,7 +17,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class FormController {
-	private static final String FORMAT = "0.00 €";
+	private static final String FORMAT = "0.00 â‚¬";
 	@FXML
 	private Label display;
 	@FXML
@@ -116,8 +116,8 @@ public class FormController {
 	private void zeigeRausgeld(double d) {
 		final int[] S = { 50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1 };
 		int betrag = (int)Math.round(d * 100);
-		String txt = "Das Rausgeld " + Console.Double2String(FORMAT, d) + " ergibt folgende Stückelung: \n";
-		
+		String txt = "Das Rausgeld " + Console.Double2String(FORMAT, d) + " ergibt folgende Stï¿½ckelung: \n";
+
 		for (int i = 0; i < S.length; i++) {
 			int anz = betrag / S[i];
 			if (anz>0) {
